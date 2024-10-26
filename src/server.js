@@ -5,9 +5,9 @@ const port = 3000;
 app.get('/api/user', (req, res) => {
     res.json({
         id: 1,
-        name: 'John Doe',
+        name: 'Hoveimar CBUM',
         email: 'john.doe@example.com',
-        role: 'admin',
+        role: 'olympia',
         created_at: '2021-01-01 10:00:00',
     });
 });
