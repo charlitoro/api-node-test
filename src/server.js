@@ -1,14 +1,14 @@
 const express = require('express');
+const { faker } = require('@faker-js/faker');
+
 const app = express();
 const port = 3000;
 
 app.get('/api/user', (req, res) => {
     res.json({
-        id: 1,
-        name: 'Hoveimar CBUM',
-        email: 'john.doe@example.com',
-        role: 'olympia',
-        created_at: '2021-01-01 10:00:00',
+        id: faker.string.uuid(),
+        name: faker.internet.username(),
+        email: faker.internet.email(),
     });
 });
 
