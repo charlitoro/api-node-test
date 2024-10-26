@@ -25,6 +25,13 @@ app.get('/api/stores', (req, res) => {
     ]);
 });
 
+app.get('/api/pets', (req, res) => {
+    res.json([
+        { id: 1, name: 'Pet 1', type: 'Dog' },
+        { id: 2, name: 'Pet 2', type: 'Cat' }
+    ]);
+});
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
