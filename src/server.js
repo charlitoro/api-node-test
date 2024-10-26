@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-app.get('/user', (req, res) => {
+app.get('/api/user', (req, res) => {
     console.log('GET /');
     res.json({
         id: 1,
@@ -11,14 +11,14 @@ app.get('/user', (req, res) => {
     });
 });
 
-app.get('/products', (req, res) => {
+app.get('/api/products', (req, res) => {
     res.json([
         { id: 1, name: 'Product 1', price: 100 },
         { id: 2, name: 'Product 2', price: 200 }
     ]);
 });
 
-app.get('/stores', (req, res) => {
+app.get('/api/stores', (req, res) => {
     res.json([
         { id: 1, name: 'Store 1', location: 'New York' },
         { id: 2, name: 'Store 2', location: 'Los Angeles' }
