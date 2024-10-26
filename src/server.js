@@ -34,6 +34,13 @@ app.get('/api/pets', (req, res) => {
     ]);
 });
 
+app.get('/api/carts', (req, res) => {
+    res.json([
+        { id: 1, name: 'Cart 1', total: 1000 },
+        { id: 2, name: 'Cart 2', total: 2000 }
+    ]);
+});
+
 app.listen(port, () => {
     console.log(`Running on http://localhost:${port}`);
 });
